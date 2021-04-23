@@ -1,0 +1,24 @@
+{
+  "name": "14.03.02_optimized_flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amal810c/14.03.02_optimized_flow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amal810c/14.03.02_optimized_flow/issues"
+  },
+  "homepage": "https://github.com/amal810c/14.03.02_optimized_flow#readme",
+  "devDependencies": {
+    "sass": "^1.32.11",
+    "vite": "^2.2.1"
+  }
+}
