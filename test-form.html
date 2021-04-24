@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test form 240421 Vivi</title>
+</head>
+<body>
+    <button class="add-new">Add new superhero</button>
+    
+
+    <script>
+        "use strict";
+
+const endpoint = "https://frontend2021-7beb.restdb.io/rest/ezone"; 
+const apiKey = "60740be1f592f7113340f013";
+
+window.addEventListener("load", (e) =>{
+    document.querySelector("button.add-new").addEventListener("click", () =>{
+        const data = {
+            fullname: "Vivi",
+            gamertag: "Vivse",
+            date_of_birth: "1993-05-28", 
+            game_type: ["fps", "platform"]
+          };
+        post(data);
+    });
+}); 
+
+        function post(data){
+  const postData = JSON.stringify(data);
+  fetch(endpoint, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": apiKey,
+      "cache-control": "no-cache"
+    },
+    body: postData
+  })
+    .then((res) => res.json())
+    .then((data) => showHero(data));
+} 
+    </script>
+</body>
+</html>
