@@ -2,6 +2,7 @@
 
 import "./sass/style.scss";
 import { headers, endpoint } from "./settings.js"; 
+import "./form"; 
 
 window.addEventListener("DOMContentLoaded", init); 
 

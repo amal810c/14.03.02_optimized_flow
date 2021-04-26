@@ -1,0 +1,248 @@
+#popup {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FONT */
+
+@font-face {
+  font-family: "sharpiro-bold";
+  src: url(sharpiro-bold.woff2);
+}
+@font-face {
+  font-family: "sharpiro-regular";
+  src: url(sharpiro-regular.woff2);
+}
+
+@font-face {
+  font-family: "uniform-pro-con-medium";
+  src: url(uniform-pro-con-medium.woff2);
+}
+
+@font-face {
+  font-family: "uniform-pro-con-black";
+  src: url(uniform-pro-con-black.woff2);
+}
+
+/* FRONTPAGE */
+
+// section {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgb(22, 22, 42);
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+button {
+  background-color: rgb(62, 20, 214);
+
+  box-shadow: 0 33px 65px rgb(0 0 0 / 15%),
+    0 21.3889px 38.0671px rgb(0 0 0 / 11%),
+    0 12.7111px 20.7037px rgb(0 0 0 / 9%), 0 6.6px 10.5625px rgb(0 0 0 / 8%),
+    0 2.68889px 5.2963px rgb(0 0 0 / 6%), 0 0.611111px 2.55787px rgb(0 0 0 / 4%);
+  color: rgb(227, 227, 229);
+  border: none;
+  font-size: 12px;
+  font-size: 0.75rem;
+  border-radius: 40px;
+  padding: 1.1875rem 2.5rem;
+  line-height: 110%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(98, 89, 250);
+}
+
+.header-text {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  width: 80vw;
+  /* padding: 5% 5% 0 5%; */
+}
+
+h1 {
+  font-size: 56px;
+  font-size: 3.5rem;
+  font-family: "sharpiro-bold", sans-serif;
+  color: rgb(185, 248, 185);
+  line-height: 3.8125rem;
+  margin: 72px 0;
+}
+
+p {
+  line-height: 1.5rem;
+  font-family: "shapiro-regular", sans-serif;
+  color: #fff;
+  word-spacing: 1px;
+  font-size: 1rem;
+}
+
+h1 + p {
+  margin-bottom: 1.5rem;
+}
+
+/* STEPS */
+.step-dots {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(244, 141, 105);
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: rgb(91, 224, 128);
+}
+
+/* FORM */
+.form-outer {
+  background-color: rgb(63, 63, 80);
+  border-radius: 4px;
+  width: 80vw;
+  height: auto;
+  position: relative;
+  top: 20vh;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  margin: 5vw;
+
+  border-radius: 4px;
+  border: 1px solid rgb(22, 22, 42);
+  box-shadow: 0 33px 65px rgb(0 0 0 / 15%),
+    0 21.3889px 38.0671px rgb(0 0 0 / 11%),
+    0 12.7111px 20.7037px rgb(0 0 0 / 9%), 0 6.6px 10.5625px rgb(0 0 0 / 8%),
+    0 2.68889px 5.2963px rgb(0 0 0 / 6%), 0 0.611111px 2.55787px rgb(0 0 0 / 4%);
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: rgb(255, 181, 145);
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+#prevBtn {
+  background-color: rgb(98, 89, 250);
+}
+
+#prevBtn:hover {
+  background-color: rgb(202, 206, 252);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-transform: uppercase;
+  font-family: "sharpiro-bold";
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-family: "sharpiro-regular";
+  color: rgb(227, 227, 229);
+}
+
+.form-control {
+  display: grid;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.form-buttons {
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+/* .form-buttons-one {
+  float: right;
+  align-self: flex-end;
+} */
+
+input,
+select,
+input[type="date"],
+input[type="checkbox"],
+textarea {
+  border-radius: 4px;
+  background-color: rgb(165, 165, 172);
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 3vh;
+  color: rgb(227, 227, 229);
+  font-family: "shapiro-regular", sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.hours {
+  display: flex;
+  align-items: first baseline;
+}
+
+/* POPUP */
+.close-icon {
+  position: fixed;
+  right: 42px;
+  top: 32px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  line-height: 1.5rem;
+  font-family: "shapiro-regular", sans-serif;
+}
+
+.hide {
+  display: none;
+}

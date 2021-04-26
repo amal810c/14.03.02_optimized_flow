@@ -12,9 +12,215 @@
       <button>Improve your performance</button>
   </section>
 
-  <!-- <section id="popup">
+  <section id="popup">
+    <div class="form-outer">
+      <div class="close-icon">X</div>
+      
+      <div class="header-text">
+          <h1>Signup form</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor accusantium ea eos veniam nihil neque maxime non commodi aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo vel dolorum voluptatibus, cum adipisci similique! Similique asperiores atque pariatur libero?</p>    
+      </div>
+      
+        <div class="step-dots">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+          </div>
+      
+          <form action="" method="POST">
+      
+          <!-- Personal info -->
+          <fieldset class="tab">
+              <legend>Personal information</legend>
+              <div class="form-control">
+      
+              <label for="personal-fullname">Full name</label>
+              <input type="text" id="personal-fullname" placeholder="Ex. John Doe" required>
+      
+              <label for="personal-gamertag">Gamertag @</label>
+              <input type="text" id="personal-fullname" placeholder="Ex. John Doe">
 
-  </section> -->
+              <label for="personal-profileimage">Profile image</label>
+              <input type="file" id="personal-profileimage">
+
+              <label for="personal-email">E-mail</label>
+              <input type="email" id="personal-email" placeholder="Ex. john@doe.com" required>
+      
+              <label for="personal-dob">Date of birth</label>
+              <input type="date" id="personal-fullname" required>
+      
+              <label for="personal-phone">Phonenumber</label>
+              <input type="tel" id="personal-phone" placeholder="Ex. 27570612" >
+      
+              <label for="personal-password">Password</label>
+              <input type="password" id="personal-password" placeholder="Enter new password">
+      
+              <label for="personal-password">Repeat password</label>
+              <input type="password" id="personal-passwordrepeat" placeholder="Enter password again">
+              </div>
+          </fieldset>
+      
+          <!-- Gaming info -->
+          <fieldset class="tab">
+              <legend>Gaming</legend>
+              <div class="form-control">
+    
+              <label for="game-console">What are your preferred console?</label>
+              <select id="game-console" multiple required>
+                  <option value="">Select console</option>
+                  <option value="PC">PC</option>
+                  <option value="Xbox">Xbox</option>
+                  <option value="PS3">PlayStation 3</option>
+                  <option value="PS4">PlayStation 4</option>
+                  <option value="PS5">PlayStation 5</option>
+                  <option value="Switch">Nintendo Switch</option>
+                  <option value="Wii">Nintendo Wii</option>
+              </select>
+
+              <label for="game-gametype">What type of game do you play?</label>
+                  <select id="game-gametype" multiple required>
+                      <option value="">Select type of game</option>
+                      <option value="FPS">FPS</option>
+                      <option value="MMORPG">MMORPG</option>
+                      <option value="Sports">Sports</option>
+                      <option value="Racing">Racing</option>
+                      <option value="Tower-defense">Tower defense</option>
+                      <option value="RTS">RTS</option>
+                      <option value="Simulation">Simulation</option>
+                      <option value="Role-playing">Role-playing</option>
+                      <option value="Adventure">Adventure</option>
+                      <option value="Survival">Survival</option>
+                      <option value="Fighting">Fighting</option>
+                      <option value="Battle-royale">Battle royale</option>
+                      <option value="Rhythm">Rhythm</option>
+                      <option value="Platform">Platform</option>
+                  </select>
+      
+                  <label for="game-gametitle">What games do you play?</label>
+                  <select id="game-gametitle" multiple required>
+                      <option value="">Select type of game</option>
+                      <option value="CS-GO">CS:GO</option>
+                      <option value="Tekken">Tekken</option>
+                      <option value="FIFA">FIFA</option>
+                      <option value="SuperMario">Super Mario</option>
+                      <option value="Fortnite">Fortnite</option>
+                      <option value="cod">Call of Duty</option>
+                      <option value="TheSims">The Sims</option>
+                      <option value="MortalCombat">Mortal Combat</option>
+                      <option value="GuitarHero">Guitar Hero</option>
+                      <option value="WorldOfWarcraft">World of Warcraft</option>
+                      <option value="Skyrim">Skyrim</option>
+                      <option value="Starcraft">Starcraft</option>
+                      <option value="Warcraft">Warcraft</option>
+                      <option value="Dota">Dota</option>
+                      <option value="Valorant">Valorant</option>
+                      <option value="LeftForDead">Left for dead</option>
+                      <option value="Overwatch">Overwatch</option>
+                      <option value="PUBG">PUBG</option>
+                      <option value="Diablo">Diablo</option>
+                      <option value="Minecraft">Minecraft</option>
+                  </select>
+
+                  <!-- Game level -->
+                  <label for="game_level">What level do you play?</label>
+                  <label for="game_level">Beginner</label>
+                  <input type="radio" id="game_level">
+
+                  <label for="game_level">Lower intermediate</label>
+                  <input type="radio" id="game_level">
+
+                  <label for="game_level">Experienced</label>
+                  <input type="radio" id="game_level">
+
+                  <label for="game_level">Professional</label>
+                  <input type="radio" id="game_level">
+
+                  <!-- Game-->
+                  <label for="game_hours"></label>
+                  <input type="number" id="game_hours" placeholder="Ex. 8" required>
+
+                  <!-- Game time of day -->
+                  <label for="game-tod">When do you play?</label>
+                  <div class="hours">
+                  <label for="game-tod">6 am - 12 pm</label>
+                  <input type="checkbox" id="game-tod">
+                  </div>
+      
+                  <label for="game-tod">12 pm - 6 pm</label>
+                  <input type="checkbox" id="game-tod">
+      
+                  <label for="game-tod">6 pm - 00 am</label>
+                  <input type="checkbox" id="game-tod">
+      
+                  <label for="game-tod">00 am - 6 am</label>
+                  <input type="checkbox" id="game-tod">
+                  </div>
+          </fieldset>
+      
+          <!-- Improvements -->
+          <fieldset class="tab">
+              <legend>Improvements</legend>
+              <div class="form-control">
+      
+              <label for="improvements-areas">What areas would you like to improve</label>
+                  <select id="improvements-areas" multiple required>
+                      <option value="">Select area</option>
+                      <option value="coordination">Hand/eye coordination</option>
+                      <option value="reaction">Reaction time</option>
+                      <option value="Hearing">Hearing</option>
+                      <option value="Vision">Vision</option>
+                      <option value="Communication">Communication</option>
+                      <option value="Multi-tasking">Multi-tasking</option>
+                      <option value="Mindset">Mindset</option>
+                      <option value="Nutrition">Nutrition</option>
+                      <option value="Injuries">Injuries</option>
+                      <option value="Technology">Technology</option>
+                      <option value="Physiology">Physiology</option>
+                      <option value="Sleep">Sleep</option>
+                      <option value="Stress">Stress</option>
+                      <option value="Tactical">Tactical</option>
+                      <option value="Strategy">Strategy</option>
+                      <option value="Leadership">Leadership</option>
+                  </select>
+      
+                  <label for="improvements-areaslearning">What areas are you interested in learning more about?</label>
+                  <select id="improvements-areaslearning" multiple>
+                      <option value="">Select area</option>
+                      <option value="coordination">Hand/eye coordination</option>
+                      <option value="reaction">Reaction time</option>
+                      <option value="Hearing">Hearing</option>
+                      <option value="Vision">Vision</option>
+                      <option value="Communication">Communication</option>
+                      <option value="Multi-tasking">Multi-tasking</option>
+                      <option value="Mindset">Mindset</option>
+                      <option value="Nutrition">Nutrition</option>
+                      <option value="Injuries">Injuries</option>
+                      <option value="Technology">Technology</option>
+                      <option value="Physiology">Physiology</option>
+                      <option value="Sleep">Sleep</option>
+                      <option value="Stress">Stress</option>
+                      <option value="Tactical">Tactical</option>
+                      <option value="Strategy">Strategy</option>
+                      <option value="Leadership">Leadership</option>
+                  </select>
+      
+                  <label for="improvements-comments">Comments or questions?</label>
+                  <textarea name="" id="improvements-comments" cols="30" rows="10" placeholder="Ex. Write about yourself..."></textarea>
+                  </div>
+          </fieldset>
+      
+      <div class="form-buttons">
+          <div class="form-buttons-one">
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              <button type="submit" id="submitBtn" class="hide"></button>
+          </div>
+      </div>
+      
+      </form>
+      
+      </div>
+  </section>
     
 
     <script type="module" src="/main.js"></script>
