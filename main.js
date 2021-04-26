@@ -1,6 +1,6 @@
 "use strict";
 
-import "./style.scss";
+import "./sass/style.scss";
 import { headers, endpoint } from "./settings.js"; 
 
 window.addEventListener("DOMContentLoaded", init); 
@@ -38,12 +38,7 @@ function post(data){
   const postData = JSON.stringify(data); 
   fetch(endpoint, {
     method : "POST", 
-    headers : headers
-//     {"Content-Type": "application/json; charset=utf-8", 
-//   "x-apikey" : apiKey, 
-// "cache-control" : "no-cache", 
-//     }
-    ,
+    headers : headers,
     body: postData
   })
   .then((res) => res.json())
