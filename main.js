@@ -1,23 +1,27 @@
 "use strict";
 
 import "./style.scss";
+import { headers, endpoint } from "./settings.js"; 
 
 window.addEventListener("DOMContentLoaded", init); 
 
-const endpoint = "https://frontend2021-7beb.restdb.io/rest/ezone"; 
-const apiKey = "60740be1f592f7113340f013";
-const lort = {
+const data = {
   fullname: "Vivi",
-  gamertag: "Vivse" + Math.random(),
+  gamertag: "Vivse",
+  profile_img: "profile_img.jpg", 
   email: "anton@anden.dk",
   date_of_birth: "1993-05-28", 
+  phonenumber: "27570612",
   password: "dfsdf", 
+  console: ["xbox, pc"], 
   game_type: ["FPS"],
   game_title: ["sdsdtseg"],
+  game_level: "Beginner",
   game_hours: "8",
   game_time_of_day: ["10:00am - 14:00pm"],
   improve_areas: ["sleep"],
-  interested_areas: ["stress"]
+  interested_areas: ["stress"], 
+  comment: "text comment bla bla bla"
 };
 
 
@@ -26,7 +30,7 @@ const lort = {
 function init(){
   console.log("hul"); 
 
-  post(lort); 
+  post(data); 
 }
 
 function post(data){
@@ -34,10 +38,12 @@ function post(data){
   const postData = JSON.stringify(data); 
   fetch(endpoint, {
     method : "POST", 
-    headers : {"Content-Type": "application/json; charset=utf-8", 
-  "x-apikey" : apiKey, 
-"cache-control" : "no-cache", 
-    },
+    headers : headers
+//     {"Content-Type": "application/json; charset=utf-8", 
+//   "x-apikey" : apiKey, 
+// "cache-control" : "no-cache", 
+//     }
+    ,
     body: postData
   })
   .then((res) => res.json())
