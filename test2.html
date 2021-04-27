@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+.hide{
+  display: none; 
+}
+
+form{
+  display: grid;
+}
+
+.fieldset1, .fieldset2, .fieldset3{
+  grid-area: 1 / 1 ; }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset class="fieldset1">
+          <label for="">Navn</label>
+          <input type="text" placeholder="John Doe">
+          <input type="button" id="knap1">Knap 1</input>
+        </fieldset>
+        <fieldset class="fieldset2 hide">
+          <label for="">Person</label>
+          <input type="text" placeholder="John Doe">
+          <input type="button" id="knap2">Knap 2</input>
+        </fieldset>
+        <fieldset class="fieldset3 hide">
+          <label for="">Film</label>
+          <input type="text" placeholder="John Doe">
+          <button>Submit info</button>
+          <!-- <input type="button" id="knap3">Knap 3</input> -->
+        </fieldset>
+      </form>
+
+      <script>
+          document.querySelector("#knap1").addEventListener("click", nextTab); 
+
+function nextTab(){
+  document.querySelector(".fieldset1").classList.add("hide"); 
+  document.querySelector(".fieldset2").classList.remove("hide"); 
+document.querySelector("#knap2").addEventListener("click", lastTab); 
+}
+
+function lastTab(){
+  document.querySelector(".fieldset2").classList.add("hide"); 
+  document.querySelector(".fieldset3").classList.remove("hide"); 
+}
+
+      </script>
+</body>
+</html>

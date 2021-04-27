@@ -21,16 +21,16 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor accusantium ea eos veniam nihil neque maxime non commodi aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo vel dolorum voluptatibus, cum adipisci similique! Similique asperiores atque pariatur libero?</p>    
       </div>
       
-        <div class="step-dots">
+        <!-- <div class="step-dots">
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
-          </div>
+          </div> -->
       
-          <form action="" method="POST">
+          <form id="regForm" action="" method="POST">
       
           <!-- Personal info -->
-          <fieldset class="tab">
+          <fieldset class="fieldset1">
               <legend>Personal information</legend>
               <div class="form-control">
       
@@ -58,10 +58,13 @@
               <label for="personal-password">Repeat password</label>
               <input type="password" id="personal-passwordrepeat" placeholder="Enter password again">
               </div>
+
+              <input type="button" id="knap1" value="Knap1">
           </fieldset>
+          
       
           <!-- Gaming info -->
-          <fieldset class="tab">
+          <fieldset class="fieldset2 hide">
               <legend>Gaming</legend>
               <div class="form-control">
     
@@ -155,10 +158,12 @@
                   <label for="game-tod">00 am - 6 am</label>
                   <input type="checkbox" id="game-tod">
                   </div>
+
+                  <input type="button" id="knap2" value="Knap2">
           </fieldset>
       
           <!-- Improvements -->
-          <fieldset class="tab">
+          <fieldset class="fieldset3 hide">
               <legend>Improvements</legend>
               <div class="form-control">
       
@@ -207,15 +212,16 @@
                   <label for="improvements-comments">Comments or questions?</label>
                   <textarea name="" id="improvements-comments" cols="30" rows="10" placeholder="Ex. Write about yourself..."></textarea>
                   </div>
+
+                  <input type="submit" id="knap3" value="Knap3">
           </fieldset>
       
-      <div class="form-buttons">
+      <!-- <div class="form-buttons">
           <div class="form-buttons-one">
-              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-              <button type="submit" id="submitBtn" class="hide"></button>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
           </div>
-      </div>
+      </div> -->
       
       </form>
       
@@ -224,5 +230,6 @@
     
 
     <script type="module" src="/main.js"></script>
+    
   </body>
 </html>
