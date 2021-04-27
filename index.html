@@ -17,8 +17,8 @@
       <div class="close-icon">X</div>
       
       <div class="header-text">
-          <h1>Signup form</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor accusantium ea eos veniam nihil neque maxime non commodi aperiam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo vel dolorum voluptatibus, cum adipisci similique! Similique asperiores atque pariatur libero?</p>    
+          <h1>Improve your performance</h1>
+          <p>An independent collective of performance experts, helping you to push your boundaries and challenge your limits. It's time to get in the zone, sign up now.</p>    
       </div>
       
         <!-- <div class="step-dots">
@@ -38,9 +38,11 @@
               <input type="text" id="personal-fullname" placeholder="Ex. John Doe" required>
       
               <label for="personal-gamertag">Gamertag @</label>
+              <p class="form-optional">This field is optional</p>
               <input type="text" id="personal-fullname" placeholder="Ex. John Doe">
 
               <label for="personal-profileimage">Profile image</label>
+              <p class="form-optional">This field is optional</p>
               <input type="file" id="personal-profileimage">
 
               <label for="personal-email">E-mail</label>
@@ -50,6 +52,7 @@
               <input type="date" id="personal-fullname" required>
       
               <label for="personal-phone">Phonenumber</label>
+              <p class="form-optional">This field is optional. Providing your phonenumber gives us permission to call you.</p>
               <input type="tel" id="personal-phone" placeholder="Ex. 27570612" >
       
               <label for="personal-password">Password</label>
@@ -57,9 +60,9 @@
       
               <label for="personal-password">Repeat password</label>
               <input type="password" id="personal-passwordrepeat" placeholder="Enter password again">
-              </div>
-
-              <input type="button" id="knap1" value="Knap1">
+              
+              <input type="button" id="knap1" class="form-buttons-one" value="Next">
+            </div>
           </fieldset>
           
       
@@ -69,6 +72,7 @@
               <div class="form-control">
     
               <label for="game-console">What are your preferred console?</label>
+              <p class="form-optional">You can select multiple consoles</p>
               <select id="game-console" multiple required>
                   <option value="">Select console</option>
                   <option value="PC">PC</option>
@@ -81,6 +85,7 @@
               </select>
 
               <label for="game-gametype">What type of game do you play?</label>
+              <p class="form-optional">You can select multiple type of games</p>
                   <select id="game-gametype" multiple required>
                       <option value="">Select type of game</option>
                       <option value="FPS">FPS</option>
@@ -100,6 +105,7 @@
                   </select>
       
                   <label for="game-gametitle">What games do you play?</label>
+                  <p class="form-optional">You can select multiple games</p>
                   <select id="game-gametitle" multiple required>
                       <option value="">Select type of game</option>
                       <option value="CS-GO">CS:GO</option>
@@ -126,6 +132,7 @@
 
                   <!-- Game level -->
                   <label for="game_level">What level do you play?</label>
+                  
                   <label for="game_level">Beginner</label>
                   <input type="radio" id="game_level">
 
@@ -139,11 +146,12 @@
                   <input type="radio" id="game_level">
 
                   <!-- Game-->
-                  <label for="game_hours"></label>
+                  <label for="game_hours">How many hours do you play a day?</label>
                   <input type="number" id="game_hours" placeholder="Ex. 8" required>
 
                   <!-- Game time of day -->
                   <label for="game-tod">When do you play?</label>
+                  <p class="form-optional">You can select multiple time slots</p>
                   <div class="hours">
                   <label for="game-tod">6 am - 12 pm</label>
                   <input type="checkbox" id="game-tod">
@@ -157,9 +165,9 @@
       
                   <label for="game-tod">00 am - 6 am</label>
                   <input type="checkbox" id="game-tod">
-                  </div>
-
-                  <input type="button" id="knap2" value="Knap2">
+                  
+                  <input type="button" id="knap2" class="form-buttons-one" value="Next">
+                </div>
           </fieldset>
       
           <!-- Improvements -->
@@ -168,6 +176,7 @@
               <div class="form-control">
       
               <label for="improvements-areas">What areas would you like to improve</label>
+              <p class="form-optional">You can select multiple areas to improve</p>
                   <select id="improvements-areas" multiple required>
                       <option value="">Select area</option>
                       <option value="coordination">Hand/eye coordination</option>
@@ -189,6 +198,7 @@
                   </select>
       
                   <label for="improvements-areaslearning">What areas are you interested in learning more about?</label>
+                  <p class="form-optional">This field is optional. You can select multiple areas to learn more about</p>
                   <select id="improvements-areaslearning" multiple>
                       <option value="">Select area</option>
                       <option value="coordination">Hand/eye coordination</option>
@@ -210,10 +220,11 @@
                   </select>
       
                   <label for="improvements-comments">Comments or questions?</label>
+                  <p class="form-optional">This field is optional</p>
                   <textarea name="" id="improvements-comments" cols="30" rows="10" placeholder="Ex. Write about yourself..."></textarea>
-                  </div>
-
-                  <input type="submit" id="knap3" value="Knap3">
+                  
+                  <input type="submit" id="knap3" value="Yes, improve my performance now!">
+                </div>
           </fieldset>
       
       <!-- <div class="form-buttons">

@@ -1,3 +1,26 @@
+//COLORS
+
+//Fire & passion
+$orange: rgb(244, 141, 105);
+$lightorange: rgb(255, 181, 145);
+$pastelorange: rgb(248, 221, 206);
+
+//Space & explore
+$blue: rgb(62, 20, 214);
+$lightblue: rgb(98, 89, 250);
+$pastelblue: rgb(202, 206, 252);
+
+//Aurora & grow
+$green: rgb(91, 224, 128);
+$lightgreen: rgb(185, 248, 185);
+$pastelgreen: rgb(223, 252, 223);
+
+//Aviation & metal
+$grey: rgb(22, 22, 42);
+$mediumgrey: rgb(63, 63, 80);
+$lightgrey: rgb(165, 165, 172);
+$pastelgrey: rgb(227, 227, 229);
+
 #popup {
   background-color: rgb(0, 0, 0, 0.8);
   width: 100vw;
@@ -46,27 +69,54 @@
 //   align-items: center;
 // }
 
-button {
-  background-color: rgb(62, 20, 214);
+button,
+input[type="button"] {
+  background-color: $pastelblue;
 
   box-shadow: 0 33px 65px rgb(0 0 0 / 15%),
     0 21.3889px 38.0671px rgb(0 0 0 / 11%),
     0 12.7111px 20.7037px rgb(0 0 0 / 9%), 0 6.6px 10.5625px rgb(0 0 0 / 8%),
     0 2.68889px 5.2963px rgb(0 0 0 / 6%), 0 0.611111px 2.55787px rgb(0 0 0 / 4%);
-  color: rgb(227, 227, 229);
+  color: $grey;
   border: none;
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   border-radius: 40px;
   padding: 1.1875rem 2.5rem;
   line-height: 110%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 2.5rem;
+
+  &:hover,
+  input[type="button"]:hover {
+    background-color: $lightblue;
+    color: $pastelgrey;
+  }
 }
 
-button:hover {
-  background-color: rgb(98, 89, 250);
+input[type="submit"] {
+  box-shadow: 0 33px 65px rgb(0 0 0 / 15%),
+    0 21.3889px 38.0671px rgb(0 0 0 / 11%),
+    0 12.7111px 20.7037px rgb(0 0 0 / 9%), 0 6.6px 10.5625px rgb(0 0 0 / 8%),
+    0 2.68889px 5.2963px rgb(0 0 0 / 6%), 0 0.611111px 2.55787px rgb(0 0 0 / 4%);
+  border: none;
+  font-size: 12px;
+  font-size: 1rem;
+  border-radius: 40px;
+  padding: 1.1875rem 2.5rem;
+  line-height: 110%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  background-color: $blue;
+  color: $pastelgrey;
+  &:hover {
+    background-color: $pastelblue;
+    color: $grey;
+  }
 }
 
 .header-text {
@@ -74,8 +124,14 @@ button:hover {
   justify-content: center;
   text-align: center;
 
-  width: 80vw;
+  width: 50vw;
+  margin: 0 auto;
   /* padding: 5% 5% 0 5%; */
+
+  p {
+    text-align: left;
+    font-size: 1.3rem;
+  }
 }
 
 h1 {
@@ -141,10 +197,10 @@ form {
   justify-content: center;
   flex-direction: column;
   padding: 5%;
-  margin: 5vw;
+  margin: 5vw 10vw;
 
   border-radius: 4px;
-  border: 1px solid rgb(22, 22, 42);
+  border: 2px solid $pastelgrey;
   box-shadow: 0 33px 65px rgb(0 0 0 / 15%),
     0 21.3889px 38.0671px rgb(0 0 0 / 11%),
     0 12.7111px 20.7037px rgb(0 0 0 / 9%), 0 6.6px 10.5625px rgb(0 0 0 / 8%),
@@ -176,12 +232,21 @@ fieldset {
 legend {
   text-transform: uppercase;
   font-family: "sharpiro-bold";
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 label {
   font-family: "sharpiro-regular";
   color: rgb(227, 227, 229);
+}
+
+.form-optional {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: $lightgrey;
 }
 
 .form-control {
@@ -190,17 +255,12 @@ label {
   gap: 0.3rem;
 }
 
-.form-buttons {
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  padding: 5%;
-}
-
-/* .form-buttons-one {
-  float: right;
-  align-self: flex-end;
-} */
+// .form-buttons {
+//   overflow: auto;
+//   display: flex;
+//   justify-content: center;
+//   padding: 5%;
+// }
 
 input,
 select,
@@ -212,7 +272,7 @@ textarea {
   outline: none;
   border: none;
   padding: 0.5rem;
-  margin-bottom: 3vh;
+  margin-bottom: 10vh;
   color: rgb(227, 227, 229);
   font-family: "shapiro-regular", sans-serif;
   line-height: 1.5rem;
