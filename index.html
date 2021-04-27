@@ -9,7 +9,7 @@
   <body>
   
   <section class="frontpage">
-      <button>Improve your performance</button>
+      <button id="frontpagebutton">Improve your performance</button>
   </section>
 
   <section id="popup">
@@ -34,32 +34,32 @@
               <legend>Personal information</legend>
               <div class="form-control">
       
-              <label for="personal-fullname">Full name</label>
-              <input type="text" id="personal-fullname" placeholder="Ex. John Doe" required>
+              <label for="personal-fullname" class="labels">Full name</label>
+              <input type="text" id="personal-fullname" name="fullname" placeholder="Ex. John Doe" required>
       
-              <label for="personal-gamertag">Gamertag @</label>
+              <label for="personal-gamertag" class="labels">Gamertag @</label>
               <p class="form-optional">This field is optional</p>
-              <input type="text" id="personal-fullname" placeholder="Ex. John Doe">
+              <input type="text" id="personal-fullname" name="gamertag" placeholder="Ex. @johndoe">
 
-              <label for="personal-profileimage">Profile image</label>
+              <label for="personal-profileimage" class="labels">Profile image</label>
               <p class="form-optional">This field is optional</p>
-              <input type="file" id="personal-profileimage">
+              <input type="file" id="personal-profileimage" name="profileimage">
 
-              <label for="personal-email">E-mail</label>
-              <input type="email" id="personal-email" placeholder="Ex. john@doe.com" required>
+              <label for="personal-email" class="labels">E-mail</label>
+              <input type="email" id="personal-email" name="email" placeholder="Ex. john@doe.com" required>
       
-              <label for="personal-dob">Date of birth</label>
-              <input type="date" id="personal-fullname" required>
+              <label for="personal-dob" class="labels">Date of birth</label>
+              <input type="date" id="personal-fullname" name="dob" required>
       
-              <label for="personal-phone">Phonenumber</label>
+              <label for="personal-phone" class="labels">Phonenumber</label>
               <p class="form-optional">This field is optional. Providing your phonenumber gives us permission to call you.</p>
-              <input type="tel" id="personal-phone" placeholder="Ex. 27570612" >
+              <input type="tel" id="personal-phone" name="phonenumber" placeholder="Ex. 27570612" >
       
-              <label for="personal-password">Password</label>
-              <input type="password" id="personal-password" placeholder="Enter new password">
+              <label for="personal-password" class="labels">Password</label>
+              <input type="password" id="personal-password" name="password" placeholder="Enter new password">
       
-              <label for="personal-password">Repeat password</label>
-              <input type="password" id="personal-passwordrepeat" placeholder="Enter password again">
+              <label for="personal-password" class="labels">Repeat password</label>
+              <input type="password" id="personal-passwordrepeat" name="passwordrepeat" placeholder="Enter password again">
               
               <input type="button" id="knap1" class="form-buttons-one" value="Next">
             </div>
@@ -71,10 +71,9 @@
               <legend>Gaming</legend>
               <div class="form-control">
     
-              <label for="game-console">What are your preferred console?</label>
+              <label for="game-console" class="labels">What are your preferred console?</label>
               <p class="form-optional">You can select multiple consoles</p>
-              <select id="game-console" multiple required>
-                  <option value="">Select console</option>
+              <select id="game-console" name="console" multiple required>
                   <option value="PC">PC</option>
                   <option value="Xbox">Xbox</option>
                   <option value="PS3">PlayStation 3</option>
@@ -84,10 +83,9 @@
                   <option value="Wii">Nintendo Wii</option>
               </select>
 
-              <label for="game-gametype">What type of game do you play?</label>
+              <label for="game-gametype" class="labels">What type of game do you play?</label>
               <p class="form-optional">You can select multiple type of games</p>
-                  <select id="game-gametype" multiple required>
-                      <option value="">Select type of game</option>
+                  <select id="game-gametype"  multiple required>
                       <option value="FPS">FPS</option>
                       <option value="MMORPG">MMORPG</option>
                       <option value="Sports">Sports</option>
@@ -104,10 +102,9 @@
                       <option value="Platform">Platform</option>
                   </select>
       
-                  <label for="game-gametitle">What games do you play?</label>
+                  <label for="game-gametitle" class="labels">What games do you play?</label>
                   <p class="form-optional">You can select multiple games</p>
-                  <select id="game-gametitle" multiple required>
-                      <option value="">Select type of game</option>
+                  <select id="game-gametitle" name="gametitle" multiple required>
                       <option value="CS-GO">CS:GO</option>
                       <option value="Tekken">Tekken</option>
                       <option value="FIFA">FIFA</option>
@@ -131,40 +128,54 @@
                   </select>
 
                   <!-- Game level -->
-                  <label for="game_level">What level do you play?</label>
+                  <label for="game_level" class="labels" >What level do you play?</label>
                   
+                  <div class="form-checkmarks">
                   <label for="game_level">Beginner</label>
-                  <input type="radio" id="game_level">
+                  <input type="radio" id="game_level" class="checkmarks"  name="gamelevel">
+                </div>
 
+                <div class="form-checkmarks">
                   <label for="game_level">Lower intermediate</label>
-                  <input type="radio" id="game_level">
+                  <input type="radio" id="game_level" class="checkmarks"  name="gamelevel">
+                </div>
 
+                  <div class="form-checkmarks">
                   <label for="game_level">Experienced</label>
-                  <input type="radio" id="game_level">
+                  <input type="radio" id="game_level" class="checkmarks" name="gamelevel">
+                </div>
 
+                  <div class="form-checkmarks">
                   <label for="game_level">Professional</label>
-                  <input type="radio" id="game_level">
+                  <input type="radio" id="game_level"  class="checkmarks" name="gamelevel">
+                </div>
 
                   <!-- Game-->
-                  <label for="game_hours">How many hours do you play a day?</label>
-                  <input type="number" id="game_hours" placeholder="Ex. 8" required>
+                  <label for="game_hours" class="labels" >How many hours do you play a day?</label>
+                  <input type="number" id="game_hours" name="hours" placeholder="Ex. 8" required>
 
                   <!-- Game time of day -->
-                  <label for="game-tod">When do you play?</label>
+                  <label for="game-tod" class="labels" >When do you play?</label>
                   <p class="form-optional">You can select multiple time slots</p>
-                  <div class="hours">
+                  <div class="form-checkmarks">
                   <label for="game-tod">6 am - 12 pm</label>
-                  <input type="checkbox" id="game-tod">
+                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
                   </div>
       
+                  <div class="form-checkmarks">
                   <label for="game-tod">12 pm - 6 pm</label>
-                  <input type="checkbox" id="game-tod">
+                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                </div>
       
+                  <div class="form-checkmarks">
                   <label for="game-tod">6 pm - 00 am</label>
-                  <input type="checkbox" id="game-tod">
+                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                </div>
       
+                  <div class="form-checkmarks">
                   <label for="game-tod">00 am - 6 am</label>
-                  <input type="checkbox" id="game-tod">
+                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                </div>
                   
                   <input type="button" id="knap2" class="form-buttons-one" value="Next">
                 </div>
@@ -175,9 +186,9 @@
               <legend>Improvements</legend>
               <div class="form-control">
       
-              <label for="improvements-areas">What areas would you like to improve</label>
+              <label for="improvements-areas" class="labels">What areas would you like to improve?</label>
               <p class="form-optional">You can select multiple areas to improve</p>
-                  <select id="improvements-areas" multiple required>
+                  <select id="improvements-areas" name="improvements" multiple required>
                       <option value="">Select area</option>
                       <option value="coordination">Hand/eye coordination</option>
                       <option value="reaction">Reaction time</option>
@@ -197,9 +208,9 @@
                       <option value="Leadership">Leadership</option>
                   </select>
       
-                  <label for="improvements-areaslearning">What areas are you interested in learning more about?</label>
+                  <label for="improvements-areaslearning" class="labels">What areas are you interested in learning more about?</label>
                   <p class="form-optional">This field is optional. You can select multiple areas to learn more about</p>
-                  <select id="improvements-areaslearning" multiple>
+                  <select id="improvements-areaslearning" name="learning" multiple>
                       <option value="">Select area</option>
                       <option value="coordination">Hand/eye coordination</option>
                       <option value="reaction">Reaction time</option>
@@ -219,9 +230,9 @@
                       <option value="Leadership">Leadership</option>
                   </select>
       
-                  <label for="improvements-comments">Comments or questions?</label>
+                  <label for="improvements-comments" class="labels">Comments or questions?</label>
                   <p class="form-optional">This field is optional</p>
-                  <textarea name="" id="improvements-comments" cols="30" rows="10" placeholder="Ex. Write about yourself..."></textarea>
+                  <textarea id="improvements-comments" name="comments" cols="30" rows="10" placeholder="Ex. Write about yourself..."></textarea>
                   
                   <input type="submit" id="knap3" value="Yes, improve my performance now!">
                 </div>

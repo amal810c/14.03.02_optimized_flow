@@ -243,6 +243,10 @@ label {
   color: rgb(227, 227, 229);
 }
 
+.labels {
+  font-family: "sharpiro-bold";
+}
+
 .form-optional {
   font-style: italic;
   font-size: 0.8rem;
@@ -253,6 +257,24 @@ label {
   display: grid;
   justify-content: center;
   gap: 0.3rem;
+}
+
+.form-checkmarks {
+  display: flex;
+  align-items: end;
+  margin-bottom: -1.5rem;
+}
+
+.checkmarks {
+  width: 1.3em;
+  height: 1.3em;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+}
+
+label[for="game_hours"] {
+  margin-top: 5vh;
 }
 
 // .form-buttons {
@@ -266,6 +288,7 @@ input,
 select,
 input[type="date"],
 input[type="checkbox"],
+input[type="number"],
 textarea {
   border-radius: 4px;
   background-color: rgb(165, 165, 172);
@@ -279,12 +302,21 @@ textarea {
   font-size: 1rem;
 }
 
-.hours {
-  display: flex;
-  align-items: first baseline;
-}
+// .hours {
+//   display: flex;
+//   align-items: first baseline;
+// }
 
 /* POPUP */
+
+#popup {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
 .close-icon {
   position: fixed;
   right: 42px;
@@ -301,8 +333,4 @@ textarea {
   z-index: 1;
   line-height: 1.5rem;
   font-family: "shapiro-regular", sans-serif;
-}
-
-.hide {
-  display: none;
 }
