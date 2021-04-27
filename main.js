@@ -2,32 +2,40 @@
 
 import "./sass/style.scss";
 import { headers, endpoint } from "./settings.js"; 
-//import { nextPrev } from "./form.js"; 
-// import { showTab, nextPrev, validateForm, fixStepIndicator } from "./form.js"; 
 
 window.addEventListener("DOMContentLoaded", init); 
 
 const popup = document.querySelector("#popup"); 
+const thankyou = document.querySelector("#thankyou"); 
 
 function init(){
-  console.log("hul"); 
+console.log("hul"); 
 
-// document.querySelector(".frontpage button").addEventListener("click", showPopup);
 document.querySelector("#frontpagebutton").addEventListener("click", () => popup.style.visibility = "visible"); 
 
 //Luk popup
 document.querySelector(".close-icon").addEventListener("click", () => popup.style.visibility = "hidden");
+document.querySelector(".close-icon").removeEventListener("click", () => popup.style.visibility = "hidden");
 
 //FORM (knapper)
 document.querySelector("#knap1").addEventListener("click", nextTab); 
 
+document.querySelector("#knap3").addEventListener("click", showThankyou);
+
 }
 
-// function showPopup(){
-//   document.querySelector("#popup").addEventListener("click", () => popup.style.display = "none"); 
-// }
+function showThankyou(){
+  document.querySelector("#thankyou").style.visibility = "visible"; 
+  document.querySelector(".form-outer").classList.add("hide"); 
 
+document.querySelector(".close-icon").addEventListener("click", hideThankyou); 
+console.log("ksjdgkjsdhg"); 
+}
 
+function hideThankyou(){
+  console.log("lort"); 
+  document.querySelector("#thankyou").classList.add("hide"); 
+}
 
 function nextTab(){
   document.querySelector(".fieldset1").classList.add("hide"); 

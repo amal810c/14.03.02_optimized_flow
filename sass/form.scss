@@ -183,7 +183,8 @@ h1 + p {
 }
 
 /* FORM */
-.form-outer {
+.form-outer,
+#thankyou {
   background-color: rgb(63, 63, 80);
   border-radius: 4px;
   width: 80vw;
