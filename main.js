@@ -70,7 +70,7 @@ const formFields = Object.fromEntries(formData.entries());
 
 // console.log(formFields); 
 
-function sendData(){
+function sendData(console){
   post({
     fullname: form.elements.fullname.value, 
     gamertag: form.elements.gamertag.value,
@@ -79,7 +79,7 @@ function sendData(){
     date_of_birth: form.elements.dob.value, 
     phonenumber: form.elements.phonenumber.value,
     password: form.elements.password.value, 
-    // console: form.elements.console.value, 
+    console: console, 
     // game_type: form.elements.gametype.value,
     // game_title: form.elements.gametitle.value,
     // game_level: form.elements.gamelevel.value,
@@ -95,6 +95,38 @@ function sendData(){
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  sendData(); 
+  //Check for multiple consoles checked off
+  const consoles = [];
+  const consoleElements = document.querySelectorAll("[name=console]:checked");
+  consoleElements.forEach((el) => consoles.push(el.value));
+
+  sendData(consoles); 
 })
 
+
+const consoles = getCheckboxValues("console");
+    const game_type = getCheckboxValues("game_type");
+    const game_title = getCheckboxValues("game_title");
+    const game_time_of_day = getCheckboxValues("game_time_of_day");
+    const improve_areas = getCheckboxValues("improve_areas");
+    const interested_areas = getCheckboxValues("interested_areas");
+
+    post({
+      first_name: form.elements.first_name.value,
+      last_name: form.elements.last_name.value,
+      email: form.elements.email.value,
+      platform: platforms,
+      type: types,
+      game: games,
+      areas: areas,
+    });
+  });
+}
+
+
+function getCheckboxValues(name) {
+  const items = [];
+  const itemEls = document.querySelectorAll(`[name=${name}]:checked`);
+  itemEls.forEach((el) => items.push(el.value));
+  return items;
+}

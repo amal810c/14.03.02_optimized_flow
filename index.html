@@ -73,15 +73,30 @@
     
               <label for="game-console" class="labels">What are your preferred console?</label>
               <p class="form-optional">You can select multiple consoles</p>
-              <select id="game-console" name="console" multiple required>
-                  <option value="PC">PC</option>
+              <!-- <select id="game-console" name="console" multiple required>
+                  <option value="PC" >PC</option>
                   <option value="Xbox">Xbox</option>
                   <option value="PS3">PlayStation 3</option>
                   <option value="PS4">PlayStation 4</option>
                   <option value="PS5">PlayStation 5</option>
                   <option value="Switch">Nintendo Switch</option>
                   <option value="Wii">Nintendo Wii</option>
-              </select>
+              </select> -->
+
+              <details>
+                <summary>What are your preferred console?</summary>
+                <label for="pc"><input id="pc" type="checkbox" checked name="console" value="PC">PC</label>
+                <label for="xbox"><input id="xbox" type="checkbox" name="console" value="Xbox">Xbox</label>
+                <label for="ps3"><input id="ps3" type="checkbox" name="console" value="PS3">PS3</label>
+              </details>
+
+
+
+
+
+
+
+            
 
               <label for="game-gametype" class="labels">What type of game do you play?</label>
               <p class="form-optional">You can select multiple type of games</p>
@@ -243,7 +258,13 @@
 
     <div id="thankyou" style="visibility: hidden;">
         <div class="close-icon">X</div>
-        <h1>Tak for sfksklgslkjgkjlfsgjk</h1>
+        <div class="thankyou-div">
+        <h1>Thank you for subscribing!</h1>
+        <p>We look forward to send you a personalized newsletter. You will shortly receieve a e-mail for confirmation. <br> Best regards, Ezone</p>
+        </div>
+        <div class="thankyou-div"> 
+          <button>Close</button>
+        </div>
     </div>
 
 

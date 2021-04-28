@@ -193,6 +193,24 @@ h1 + p {
   top: 20vh;
 }
 
+#thankyou {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+}
+
+.thankyou-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thankyou-div button {
+  margin-bottom: 10vh;
+}
+
 form {
   display: flex;
   justify-content: center;
