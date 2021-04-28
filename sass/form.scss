@@ -375,6 +375,7 @@ input[name="fullname"]:not(:focus, :placeholder-shown):invalid {
   // background: rgb(255, 195, 195);
   background: $pastelorange;
   outline: 2px solid $orange;
+  color: $grey;
 }
 
 input[name="fullname"]:not(:focus, :placeholder-shown):invalid ~ .error {
@@ -386,9 +387,11 @@ input[name="fullname"]:not(:focus, :placeholder-shown):valid {
   // background: rgb(222, 255, 195);
   background: $pastelgreen;
   outline: 2px solid $green;
+  color: $grey;
 }
 
 input[name="fullname"]:focus {
   background: $pastelblue;
   outline: 2px solid $lightblue;
+  color: $grey;
 }
