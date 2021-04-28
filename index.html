@@ -21,12 +21,6 @@
           <p>An independent collective of performance experts, helping you to push your boundaries and challenge your limits. It's time to get in the zone, sign up now.</p>    
       </div>
       
-        <!-- <div class="step-dots">
-              <span class="step"></span>
-              <span class="step"></span>
-              <span class="step"></span>
-          </div> -->
-      
           <form id="regForm" action="" method="POST">
       
           <!-- Personal info -->
@@ -34,32 +28,33 @@
               <legend>Personal information</legend>
               <div class="form-control">
       
-              <label for="personal-fullname" class="labels">Full name</label>
-              <input type="text" id="personal-fullname" name="fullname" placeholder="Ex. John Doe" required>
+              <label for="fullname" class="labels">Full name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Ex. John Doe" minlength="2" required>
+              <p class="error">Error! This is not a valid name.</p>
       
-              <label for="personal-gamertag" class="labels">Gamertag @</label>
+              <label for="gamertag" class="labels">Gamertag @</label>
               <p class="form-optional">This field is optional</p>
-              <input type="text" id="personal-fullname" name="gamertag" placeholder="Ex. @johndoe">
+              <input type="text" id="gamertag" name="gamertag" placeholder="Ex. @johndoe">
 
-              <label for="personal-profileimage" class="labels">Profile image</label>
+              <label for="profileimage" class="labels">Profile image</label>
               <p class="form-optional">This field is optional</p>
-              <input type="file" id="personal-profileimage" name="profileimage">
+              <input type="file" id="profileimage" name="profileimage">
 
-              <label for="personal-email" class="labels">E-mail</label>
-              <input type="email" id="personal-email" name="email" placeholder="Ex. john@doe.com" required>
+              <label for="email" class="labels">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="Ex. john@doe.com" required>
       
-              <label for="personal-dob" class="labels">Date of birth</label>
-              <input type="date" id="personal-fullname" name="dob" required>
+              <label for="dob" class="labels">Date of birth</label>
+              <input type="date" id="dob" name="dob" required>
       
-              <label for="personal-phone" class="labels">Phonenumber</label>
+              <label for="phonenumber" class="labels">Phonenumber</label>
               <p class="form-optional">This field is optional. Providing your phonenumber gives us permission to call you.</p>
-              <input type="tel" id="personal-phone" name="phonenumber" placeholder="Ex. 27570612" >
+              <input type="tel" id="phonenumber" name="phonenumber" placeholder="Ex. 27570612" >
       
-              <label for="personal-password" class="labels">Password</label>
-              <input type="password" id="personal-password" name="password" placeholder="Enter new password">
+              <label for="password" class="labels">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter new password">
       
-              <label for="personal-password" class="labels">Repeat password</label>
-              <input type="password" id="personal-passwordrepeat" name="passwordrepeat" placeholder="Enter password again">
+              <label for="passwordrepeat" class="labels">Repeat password</label>
+              <input type="password" id="passwordrepeat" name="passwordrepeat" placeholder="Enter password again">
               
               <input type="button" id="knap1" class="form-buttons-one" value="Next">
             </div>
@@ -70,180 +65,172 @@
           <fieldset class="fieldset2 hide">
               <legend>Gaming</legend>
               <div class="form-control">
-    
-              <label for="game-console" class="labels">What are your preferred console?</label>
-              <p class="form-optional">You can select multiple consoles</p>
-              <!-- <select id="game-console" name="console" multiple required>
-                  <option value="PC" >PC</option>
-                  <option value="Xbox">Xbox</option>
-                  <option value="PS3">PlayStation 3</option>
-                  <option value="PS4">PlayStation 4</option>
-                  <option value="PS5">PlayStation 5</option>
-                  <option value="Switch">Nintendo Switch</option>
-                  <option value="Wii">Nintendo Wii</option>
-              </select> -->
-
-              <details>
-                <summary>What are your preferred console?</summary>
-                <label for="pc"><input id="pc" type="checkbox" checked name="console" value="PC">PC</label>
-                <label for="xbox"><input id="xbox" type="checkbox" name="console" value="Xbox">Xbox</label>
-                <label for="ps3"><input id="ps3" type="checkbox" name="console" value="PS3">PS3</label>
+              
+             <details>
+                <summary class="labels">What are your preferred console?
+                  <p class="form-optional">You can select multiple consoles</p>
+                </summary>
+                <div class="form-checkmarks"><label for="console"><input id="console1" type="checkbox" name="console" value="PC">PC</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console2" type="checkbox" name="console" value="Xbox">Xbox</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console3" type="checkbox" name="console" value="PS3">PS3</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console4" type="checkbox" name="console" value="PS4">PS4</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console5" type="checkbox" name="console" value="PS5">PS5</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console6" type="checkbox" name="console" value="Switch">Nintendo Switch</label></div>
+                <div class="form-checkmarks"><label for="console"><input id="console7" type="checkbox" name="console" value="Wii">Nintendo Wii</label></div>
               </details>
 
 
+                  <details>
+                    <summary class="labels">What type of game do you play?
+                      <p class="form-optional">You can select multiple type of games</p>
+                    </summary>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype1" type="checkbox" name="gametype" value="FPS">FPS</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype2" type="checkbox" name="gametype" value="MMORPG">MMORPG</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype3" type="checkbox" name="gametype" value="Sports">Sports</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype4" type="checkbox" name="gametype" value="Racing">Racing</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype5" type="checkbox" name="gametype" value="Tower-defense">Tower defense</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype6" type="checkbox" name="gametype" value="RTS">RTS</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype7" type="checkbox" name="gametype" value="Simulation">Simulation</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype8" type="checkbox" name="gametype" value="Role-playing">Role playing</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype9" type="checkbox" name="gametype" value="Adventure">Adventure</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype10" type="checkbox" name="gametype" value="Survival">Survival</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype11" type="checkbox" name="gametype" value="Fighting">Fighting</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype12" type="checkbox" name="gametype" value="Battle-royale">Battle royale</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype13" type="checkbox" name="gametype" value="Rhythm">Rhythm</label></div>
+                    <div class="form-checkmarks"><label for="gametype"><input id="gametype14" type="checkbox" name="gametype" value="Platform">Platform</label></div>
+                  </details>
 
+                  <details>
+                    <summary class="labels">What games do you play?
+                      <p class="form-optional">You can select multiple games</p>
+                    </summary>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle1" type="checkbox" name="gametitle" value="CS-GO">CS:GO</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle2" type="checkbox" name="gametitle" value="Tekken">Tekken</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle3" type="checkbox" name="gametitle" value="FIFA">FIFA</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle4" type="checkbox" name="gametitle" value="SuperMario">Super Mario</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle5" type="checkbox" name="gametitle" value="Call of Duty">Call of Duty</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle6" type="checkbox" name="gametitle" value="RTS">RTS</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle7" type="checkbox" name="gametitle" value="TheSims">The Sims</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle8" type="checkbox" name="gametitle" value="MortalCombat">Mortal Combat</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle9" type="checkbox" name="gametitle" value="GuitarHero">Guitar Hero</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle10" type="checkbox" name="gametitle" value="WorldOfWarcraft">World Of Warcraft</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle11" type="checkbox" name="gametitle" value="Skyrim">Skyrim</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle12" type="checkbox" name="gametitle" value="Starcraft">Starcraft</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle13" type="checkbox" name="gametitle" value="Warcraft">Warcraft</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle14" type="checkbox" name="gametitle" value="Dota">Dota</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle15" type="checkbox" name="gametitle" value="Valorant">Valorant</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle16" type="checkbox" name="gametitle" value="LeftForDead">Left For Dead</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle17" type="checkbox" name="gametitle" value="Overwatch">Overwatch</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle18" type="checkbox" name="gametitle" value="PUBG">PUBG</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle19" type="checkbox" name="gametitle" value="Diablo">Diablo</label></div>
+                    <div class="form-checkmarks"><label for="gametitle"><input id="gametitle20" type="checkbox" name="gametitle" value="Minecraft">Minecraft</label></div>
+                  </details>
 
-
-
-
-            
-
-              <label for="game-gametype" class="labels">What type of game do you play?</label>
-              <p class="form-optional">You can select multiple type of games</p>
-                  <select id="game-gametype"  multiple required>
-                      <option value="FPS">FPS</option>
-                      <option value="MMORPG">MMORPG</option>
-                      <option value="Sports">Sports</option>
-                      <option value="Racing">Racing</option>
-                      <option value="Tower-defense">Tower defense</option>
-                      <option value="RTS">RTS</option>
-                      <option value="Simulation">Simulation</option>
-                      <option value="Role-playing">Role-playing</option>
-                      <option value="Adventure">Adventure</option>
-                      <option value="Survival">Survival</option>
-                      <option value="Fighting">Fighting</option>
-                      <option value="Battle-royale">Battle royale</option>
-                      <option value="Rhythm">Rhythm</option>
-                      <option value="Platform">Platform</option>
-                  </select>
-      
-                  <label for="game-gametitle" class="labels">What games do you play?</label>
-                  <p class="form-optional">You can select multiple games</p>
-                  <select id="game-gametitle" name="gametitle" multiple required>
-                      <option value="CS-GO">CS:GO</option>
-                      <option value="Tekken">Tekken</option>
-                      <option value="FIFA">FIFA</option>
-                      <option value="SuperMario">Super Mario</option>
-                      <option value="Fortnite">Fortnite</option>
-                      <option value="cod">Call of Duty</option>
-                      <option value="TheSims">The Sims</option>
-                      <option value="MortalCombat">Mortal Combat</option>
-                      <option value="GuitarHero">Guitar Hero</option>
-                      <option value="WorldOfWarcraft">World of Warcraft</option>
-                      <option value="Skyrim">Skyrim</option>
-                      <option value="Starcraft">Starcraft</option>
-                      <option value="Warcraft">Warcraft</option>
-                      <option value="Dota">Dota</option>
-                      <option value="Valorant">Valorant</option>
-                      <option value="LeftForDead">Left for dead</option>
-                      <option value="Overwatch">Overwatch</option>
-                      <option value="PUBG">PUBG</option>
-                      <option value="Diablo">Diablo</option>
-                      <option value="Minecraft">Minecraft</option>
-                  </select>
 
                   <!-- Game level -->
-                  <label for="game_level" class="labels" >What level do you play?</label>
+                  <label for="game_level" class="labels level" >What level do you play?</label>
                   
                   <div class="form-checkmarks">
-                  <label for="game_level">Beginner</label>
-                  <input type="radio" id="game_level" class="checkmarks"  name="gamelevel">
+                  <label for="game_level1">Beginner</label>
+                  <input type="radio" id="game_level1" class="checkmarks" value="Beginner" name="gamelevel" checked>
                 </div>
 
                 <div class="form-checkmarks">
-                  <label for="game_level">Lower intermediate</label>
-                  <input type="radio" id="game_level" class="checkmarks"  name="gamelevel">
+                  <label for="game_level2">Lower intermediate</label>
+                  <input type="radio" id="game_level2" class="checkmarks" value="Lower intermediate" name="gamelevel">
                 </div>
 
                   <div class="form-checkmarks">
-                  <label for="game_level">Experienced</label>
-                  <input type="radio" id="game_level" class="checkmarks" name="gamelevel">
+                  <label for="game_level3">Experienced</label>
+                  <input type="radio" id="game_level3" class="checkmarks" value="Experienced" name="gamelevel">
                 </div>
 
                   <div class="form-checkmarks">
-                  <label for="game_level">Professional</label>
-                  <input type="radio" id="game_level"  class="checkmarks" name="gamelevel">
+                  <label for="game_level4">Professional</label>
+                  <input type="radio" id="game_level4"  class="checkmarks" value="Professional" name="gamelevel">
                 </div>
 
                   <!-- Game-->
-                  <label for="game_hours" class="labels" >How many hours do you play a day?</label>
-                  <input type="number" id="game_hours" name="hours" placeholder="Ex. 8" required>
+                  <label for="hours" class="labels" >How many hours do you play a day?</label>
+                  <input type="number" id="hours" name="hours" placeholder="Ex. 8" required>
 
                   <!-- Game time of day -->
-                  <label for="game-tod" class="labels" >When do you play?</label>
+                  <label for="gametod" class="labels" >When do you play?</label>
                   <p class="form-optional">You can select multiple time slots</p>
                   <div class="form-checkmarks">
-                  <label for="game-tod">6 am - 12 pm</label>
-                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                  <label for="gametod">06:00 am - 12:00 pm</label>
+                  <input type="checkbox" id="gametod1" class="checkmarks" value="06:00 am - 12:00 pm" name="gametod">
                   </div>
       
                   <div class="form-checkmarks">
-                  <label for="game-tod">12 pm - 6 pm</label>
-                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                  <label for="gametod">12:00 pm - 06:00 pm</label>
+                  <input type="checkbox" id="gametod2" class="checkmarks" value="12:00 pm - 06:00 pm" name="gametod">
                 </div>
       
                   <div class="form-checkmarks">
-                  <label for="game-tod">6 pm - 00 am</label>
-                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                  <label for="gametod">06:00 pm - 00:00 am</label>
+                  <input type="checkbox" id="gametod3" class="checkmarks" value="06:00 pm - 00:00 am" name="gametod">
                 </div>
       
                   <div class="form-checkmarks">
-                  <label for="game-tod">00 am - 6 am</label>
-                  <input type="checkbox" id="game-tod" class="checkmarks" name="gametod">
+                  <label for="gametod">00:00 am - 06:00 am</label>
+                  <input type="checkbox" id="gametod4" class="checkmarks" value="00:00 am - 06:00 am" name="gametod">
                 </div>
                   
                   <input type="button" id="knap2" class="form-buttons-one" value="Next">
                 </div>
-          </fieldset>
+            </fieldset>
       
           <!-- Improvements -->
           <fieldset class="fieldset3 hide">
               <legend>Improvements</legend>
               <div class="form-control">
-      
-              <label for="improvements-areas" class="labels">What areas would you like to improve?</label>
-              <p class="form-optional">You can select multiple areas to improve</p>
-                  <select id="improvements-areas" name="improvements" multiple required>
-                      <option value="">Select area</option>
-                      <option value="coordination">Hand/eye coordination</option>
-                      <option value="reaction">Reaction time</option>
-                      <option value="Hearing">Hearing</option>
-                      <option value="Vision">Vision</option>
-                      <option value="Communication">Communication</option>
-                      <option value="Multi-tasking">Multi-tasking</option>
-                      <option value="Mindset">Mindset</option>
-                      <option value="Nutrition">Nutrition</option>
-                      <option value="Injuries">Injuries</option>
-                      <option value="Technology">Technology</option>
-                      <option value="Physiology">Physiology</option>
-                      <option value="Sleep">Sleep</option>
-                      <option value="Stress">Stress</option>
-                      <option value="Tactical">Tactical</option>
-                      <option value="Strategy">Strategy</option>
-                      <option value="Leadership">Leadership</option>
-                  </select>
-      
-                  <label for="improvements-areaslearning" class="labels">What areas are you interested in learning more about?</label>
-                  <p class="form-optional">This field is optional. You can select multiple areas to learn more about</p>
-                  <select id="improvements-areaslearning" name="learning" multiple>
-                      <option value="">Select area</option>
-                      <option value="coordination">Hand/eye coordination</option>
-                      <option value="reaction">Reaction time</option>
-                      <option value="Hearing">Hearing</option>
-                      <option value="Vision">Vision</option>
-                      <option value="Communication">Communication</option>
-                      <option value="Multi-tasking">Multi-tasking</option>
-                      <option value="Mindset">Mindset</option>
-                      <option value="Nutrition">Nutrition</option>
-                      <option value="Injuries">Injuries</option>
-                      <option value="Technology">Technology</option>
-                      <option value="Physiology">Physiology</option>
-                      <option value="Sleep">Sleep</option>
-                      <option value="Stress">Stress</option>
-                      <option value="Tactical">Tactical</option>
-                      <option value="Strategy">Strategy</option>
-                      <option value="Leadership">Leadership</option>
-                  </select>
+
+                  <details>
+                    <summary class="labels">What areas would you like to improve?
+                      <p class="form-optional">You can select multiple areas to improve</p>
+                    </summary>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve1" type="checkbox" name="improve" value="Hand/eye coordination">Hand/eye coordination</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve2" type="checkbox" name="improve" value="reaction">Reaction time</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve3" type="checkbox" name="improve" value="Hearing">Hearing</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve4" type="checkbox" name="improve" value="Vision">Vision</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve5" type="checkbox" name="improve" value="Communication">Communication</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve6" type="checkbox" name="improve" value="Multi-tasking">Multi-tasking</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve7" type="checkbox" name="improve" value="Mindset">Mindset</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve8" type="checkbox" name="improve" value="Nutrition">Nutrition</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve9" type="checkbox" name="improve" value="Injuries">Injuries</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve10" type="checkbox" name="improve" value="Technology">Technology</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve11" type="checkbox" name="improve" value="Physiology">Physiology</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve12" type="checkbox" name="improve" value="Sleep">Sleep</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve13" type="checkbox" name="improve" value="Stress">Stress</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve14" type="checkbox" name="improve" value="Tactical">Tactical</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve15" type="checkbox" name="improve" value="Strategy">Strategy</label></div>
+                    <div class="form-checkmarks"><label for="improve"><input id="improve16" type="checkbox" name="improve" value="Leadership">Leadership</label></div>
+                  </details>
+
+
+                  <details>
+                    <summary class="labels">What areas are you interested in learning more about?
+                      <p class="form-optional">This field is optional. You can select multiple areas to learn more about</p>
+                    </summary>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest1" type="checkbox" name="interest" value="Hand/eye coordination">Hand/eye coordination</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest2" type="checkbox" name="interest" value="reaction">Reaction time</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest3" type="checkbox" name="interest" value="Hearing">Hearing</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest4" type="checkbox" name="interest" value="Vision">Vision</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest5" type="checkbox" name="interest" value="Communication">Communication</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest6" type="checkbox" name="interest" value="Multi-tasking">Multi-tasking</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest7" type="checkbox" name="interest" value="Mindset">Mindset</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest8" type="checkbox" name="interest" value="Nutrition">Nutrition</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest9" type="checkbox" name="interest" value="Injuries">Injuries</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest10" type="checkbox" name="interest" value="Technology">Technology</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest11" type="checkbox" name="interest" value="Physiology">Physiology</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest12" type="checkbox" name="interest" value="Sleep">Sleep</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest13" type="checkbox" name="interest" value="Stress">Stress</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest14" type="checkbox" name="interest" value="Tactical">Tactical</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest15" type="checkbox" name="interest" value="Strategy">Strategy</label></div>
+                    <div class="form-checkmarks"><label for="interest"><input id="interest16" type="checkbox" name="interest" value="Leadership">Leadership</label></div>
+                  </details>
+
       
                   <label for="improvements-comments" class="labels">Comments or questions?</label>
                   <p class="form-optional">This field is optional</p>
@@ -257,13 +244,12 @@
       </div>
 
     <div id="thankyou" style="visibility: hidden;">
-        <div class="close-icon">X</div>
         <div class="thankyou-div">
         <h1>Thank you for subscribing!</h1>
         <p>We look forward to send you a personalized newsletter. You will shortly receieve a e-mail for confirmation. <br> Best regards, Ezone</p>
         </div>
         <div class="thankyou-div"> 
-          <button>Close</button>
+          <button id="knap4">Close</button>
         </div>
     </div>
 

@@ -6,7 +6,6 @@ import { headers, endpoint } from "./settings.js";
 window.addEventListener("DOMContentLoaded", init); 
 
 const popup = document.querySelector("#popup"); 
-const thankyou = document.querySelector("#thankyou"); 
 
 function init(){
 console.log("hul"); 
@@ -28,13 +27,12 @@ function showThankyou(){
   document.querySelector("#thankyou").style.visibility = "visible"; 
   document.querySelector(".form-outer").classList.add("hide"); 
 
-document.querySelector(".close-icon").addEventListener("click", hideThankyou); 
-console.log("ksjdgkjsdhg"); 
+document.querySelector("#knap4").addEventListener("click", hideThankyou); 
 }
 
 function hideThankyou(){
-  console.log("lort"); 
-  document.querySelector("#thankyou").classList.add("hide"); 
+  document.querySelector("#thankyou").style.visibility = "hidden"; 
+  document.querySelector("#popup").style.visibility = "hidden"; 
 }
 
 function nextTab(){
@@ -47,7 +45,6 @@ function lastTab(){
   document.querySelector(".fieldset2").classList.add("hide"); 
   document.querySelector(".fieldset3").classList.remove("hide"); 
 }
-
 
 
 function post(data){
@@ -64,13 +61,18 @@ function post(data){
 
 const form = document.querySelector("form"); 
 
-const formData = new FormData(form); 
+function sendData(){
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-const formFields = Object.fromEntries(formData.entries()); 
+    const console = getCheckboxValues("console"); 
+    const gametype = getCheckboxValues("gametype");
+    const gametitle = getCheckboxValues("gametitle");
+    const gametod = getCheckboxValues("gametod");
+    const gamelevel = getCheckboxValues("gamelevel");
+    const improve = getCheckboxValues("improve");
+    const interest = getCheckboxValues("interest");
 
-// console.log(formFields); 
-
-function sendData(console){
   post({
     fullname: form.elements.fullname.value, 
     gamertag: form.elements.gamertag.value,
@@ -80,49 +82,19 @@ function sendData(console){
     phonenumber: form.elements.phonenumber.value,
     password: form.elements.password.value, 
     console: console, 
-    // game_type: form.elements.gametype.value,
-    // game_title: form.elements.gametitle.value,
-    // game_level: form.elements.gamelevel.value,
+    game_type: gametype,
+    game_title: gametitle,
+    game_level: gamelevel,
     game_hours: form.elements.hours.value,
-    // game_time_of_day: form.elements.gametod.value,
-    // improve_areas: form.elements.improvements.value,
-    // interested_areas: form.elements.learning.value, 
+    game_time_of_day: gametod,
+    improve_areas: improve, 
+    interested_areas: interest, 
     comment: form.elements.comments.value
-  }); 
   
-}
+  }); 
+  });}
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  //Check for multiple consoles checked off
-  const consoles = [];
-  const consoleElements = document.querySelectorAll("[name=console]:checked");
-  consoleElements.forEach((el) => consoles.push(el.value));
-
-  sendData(consoles); 
-})
-
-
-const consoles = getCheckboxValues("console");
-    const game_type = getCheckboxValues("game_type");
-    const game_title = getCheckboxValues("game_title");
-    const game_time_of_day = getCheckboxValues("game_time_of_day");
-    const improve_areas = getCheckboxValues("improve_areas");
-    const interested_areas = getCheckboxValues("interested_areas");
-
-    post({
-      first_name: form.elements.first_name.value,
-      last_name: form.elements.last_name.value,
-      email: form.elements.email.value,
-      platform: platforms,
-      type: types,
-      game: games,
-      areas: areas,
-    });
-  });
-}
-
+sendData()
 
 function getCheckboxValues(name) {
   const items = [];
@@ -130,3 +102,4 @@ function getCheckboxValues(name) {
   itemEls.forEach((el) => items.push(el.value));
   return items;
 }
+  

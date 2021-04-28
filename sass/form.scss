@@ -264,6 +264,7 @@ label {
 
 .labels {
   font-family: "sharpiro-bold";
+  color: #e3e3e5;
 }
 
 .form-optional {
@@ -321,6 +322,10 @@ textarea {
   font-size: 1rem;
 }
 
+details {
+  margin-bottom: 5vh;
+}
+
 // .hours {
 //   display: flex;
 //   align-items: first baseline;
@@ -352,4 +357,35 @@ textarea {
   z-index: 1;
   line-height: 1.5rem;
   font-family: "shapiro-regular", sans-serif;
+}
+
+//VALIDATION
+.error {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  color: $orange;
+  margin-top: -10vh;
+}
+
+input[name="fullname"]:not(:focus, :placeholder-shown):invalid {
+  // background: rgb(255, 195, 195);
+  background: $pastelorange;
+  outline: 2px solid $orange;
+}
+
+input[name="fullname"]:not(:focus, :placeholder-shown):invalid ~ .error {
+  opacity: 1;
+  visibility: visible;
+}
+
+input[name="fullname"]:not(:focus, :placeholder-shown):valid {
+  // background: rgb(222, 255, 195);
+  background: $pastelgreen;
+  outline: 2px solid $green;
+}
+
+input[name="fullname"]:focus {
+  background: $pastelblue;
+  outline: 2px solid $lightblue;
 }
